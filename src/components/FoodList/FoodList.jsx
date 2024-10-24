@@ -14,7 +14,6 @@ const FoodList = () => {
       const data = await response.json();
       setFoodData(data);
       setFilterData(data);
-      console.log(foodData);
     };
     fetchApi();
   }, []);
@@ -23,7 +22,6 @@ const FoodList = () => {
       foodData.foodName.toLowerCase().includes(e.target.value.toLowerCase())
     );
     setFilterData(filter);
-    console.log(filter);
   };
   if (foodData === null) {
     const shimmerCard = [];
